@@ -1,11 +1,182 @@
-div,p,h1,h2,img,ul,li,figure,table,form{margin: 0; padding: 0; }
+/*tips:图片居中display:block; margin 10 auto;*/
 
-body {background: #EEF;}
-div#header {background: #000; width: 100%; min-width:;height: 76px;min-width: 48em;}
-div#header a {text-decoration: none; }
-div#header a img{display: block; float: left;}
-div#header ul#nav {list-style: none;float: right;}
-div#header ul#nav li {float: left;line-height:76px;width: 6.5em;}
-div#header ul#nav li a{display:block;text-decoration: none;color: #FFF;}
-div#header ul#nav li a:hover{text-decoration: underline;color: #EEF;}
- 
+body,div,p,h1,h2,img,ul,li,figure,table,form{
+	margin: 0;
+	 padding: 0;
+	}
+a,h1,h2,p,td,figcaption{
+	font-family:微软雅黑,sans-serif;
+	font-size: 14px;
+	line-height: 2em;
+}
+div.article,div#sidebar {
+	 margin: 0 auto;
+	 margin:20px;
+	 padding: 20px;
+	 background: #FFF ;
+	 box-shadow: 0 2px 2px 0;
+}
+
+body {
+	background: #EEF;
+}
+div#header {
+	margin:0;
+	background: #000;
+	 width: 100%;
+	 height: 96px;
+	 /*min-width: 56em;*/
+	 overflow: hidden;
+}
+div#header a {
+	text-decoration: none;
+	font-size: 14px;
+	 }
+div#header a img{
+	display: block;
+	 float: left;
+	 padding: 10px;
+}
+div#header ul#nav {
+	list-style: none;
+	 float: right;
+	}
+div#header ul#nav li {
+	float: left;
+}
+div#header ul#nav li a{
+	display:block;
+	line-height:96px;
+	padding:0 1em;
+	text-decoration: none;
+	text-align:center;
+	color: #FFF;
+}
+div#header ul#nav li a:hover {
+	text-decoration: underline;
+	background: #900;
+}
+div#header ul#nav li a:focus {
+	text-decoration: underline;
+	background: #900;
+}
+h1 {
+	font-size: 2em;
+	line-height: 3em;
+}
+h2 {
+	font-size: 1.2em;
+	line-height: 3em;
+}
+span#author {
+	font-size: 0.9em;
+	line-height: 3em;
+	color: #999;
+}
+div#article p {
+	text-indent: 2em;
+}
+ul#articleList {
+	list-style: none;
+	 margin: 1em 2em;
+	}
+
+figcaption {
+	padding:10px 0px;
+	border: 1px dotted;
+	width: 200px;
+	line-height: 1em;
+	 text-align: center;
+	 margin: 20px;
+}
+figure img {
+	display:block;
+	 width: 80%;
+	 margin:10px auto;
+	}
+
+ol li {
+	margin-left: 2em;
+}
+table {
+	margin:0;
+	width: 100%;
+}
+th {
+	background: #000;
+	color: #FFF;
+}
+th#sum {
+	background: #AAA;
+	color: #000;
+}
+th,td {
+	text-align: left;
+}
+
+
+div#sidebar{
+	margin: 0 auto;
+	margin:30px; 
+	overflow: hidden;
+}
+
+div#sidebar h1 {
+	padding-left: 1em;
+	line-height:2em;
+	border-left: 5px solid #AAA;
+	}
+
+form {
+	margin:0 auto;
+	width:50%;
+	}
+
+form.formName{
+	float:left;
+	text-align: right;	
+	vertical-align: center;
+	height: 2em;
+}
+
+form.formValue{
+	float:left;
+	text-align: left;
+	height: 2em;
+}
+
+form.tipsName{
+	float:left;
+	text-align: right;	
+	height: 2em;
+}
+
+form.tips{
+	float:left;
+	text-align: left;
+	height: 2em;
+	color:#BBB;
+}
+
+
+input#submit{
+	display: block;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+	background-color: #05D;
+	color:#FFF; 
+	margin: 0 auto;
+	width: 50%;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+
+div#footbar{
+	padding:50px;
+	color: #FFF;
+	background:#000;
+	text-align: center;
+}
+
