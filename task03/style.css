@@ -1,0 +1,59 @@
+body,div,img{margin: 0; padding: 0;}
+
+
+body {
+	background: #000;
+}
+
+
+div#info,div#profile,div#album {
+	border: 1px	solid #999;
+	background: #FFF;
+}
+
+div#container{
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid;
+	position: relative;
+	background: #EEE;
+	overflow: hidden;
+}
+
+div#profile{
+	padding: 20px;
+	width: 160px;
+	float:left;
+}
+
+div#profile img{
+	width: 80px;
+	height: 80px;
+}
+
+div#profile p{
+	display: block;
+	float: left;
+}
+
+div#info {
+	padding: 20px;
+	position: absolute;
+	left: 240px;
+	right: 160px;
+}
+
+div#album{
+	padding: 20px;
+	width: 80px;
+	float: right;
+}
+
+div#album img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+
+
