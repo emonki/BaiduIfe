@@ -1,6 +1,6 @@
 /*tips:图片居中display:block; margin 10 auto;
 
-float:block, width:100%无法居中..;
+float:block, width:无法居中..;
 
 */
 
@@ -163,7 +163,7 @@ form.tips{
 }
 
 input#submit{
-	display: block;
+	/*display: block;*/
 	/*padding: 20px;*/
 	text-align: center;
 	margin: 0 auto;
@@ -172,7 +172,7 @@ input#submit{
 	color:#FFF; 
 	width: 50px;
 	line-height: 50px;
-	/*width: 100%;*/
+	width: 100%;
 	border-radius: 10px;
 	cursor: pointer;
 }
