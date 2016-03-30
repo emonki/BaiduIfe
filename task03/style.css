@@ -1,6 +1,8 @@
 body,div,img{margin: 0; padding: 0;}
 
-
+/** {
+  box-sizing: border-box;
+}*/
 body {
 	background: #000;
 }
@@ -37,6 +39,7 @@ div#profile p{
 }
 
 div#info {
+	float: left;
 	padding: 20px;
 	position: absolute;
 	left: 240px;
