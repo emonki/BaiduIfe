@@ -1,4 +1,8 @@
-/*tips:图片居中display:block; margin 10 auto;*/
+/*tips:图片居中display:block; margin 10 auto;
+
+float:block, width:100%无法居中..;
+
+*/
 
 body,div,p,h1,h2,img,ul,li,figure,table,form{
 	margin: 0;
@@ -163,11 +167,11 @@ input#submit{
 	/*padding: 20px;*/
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 20px;
 	background-color: #05D;
 	color:#FFF; 
-	width: 50%;
-	/*line-height: 60px;*/
+	width: 50px;
+	line-height: 50px;
 	/*width: 100%;*/
 	border-radius: 10px;
 	cursor: pointer;
