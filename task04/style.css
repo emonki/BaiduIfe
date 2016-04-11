@@ -1,0 +1,14 @@
+
+.box{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	background-color: #3BB3E0;
+	border-radius: 20px;
+	box-shadow: inset 0px 1px 0px #96E4FF, 0px 1px 0px #696363;
+}
+
+body {
+	background: #504F4F;
+}
+
