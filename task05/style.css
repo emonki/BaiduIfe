@@ -15,15 +15,15 @@ a,h1,h2,p,td,figcaption{
 }
 div.article,div#sidebar {
 	 margin: 0 auto;
-	 margin:20px;
+	 margin: 20px;
 	 padding: 20px;
 	 background: #FFF ;
 	 box-shadow: 0 2px 2px 0;
 }
 
 body {
-	background: #EEF;
-
+	background: #EEE;
+	min-width: 800px;
 }
 
 
@@ -34,7 +34,7 @@ div#sidebar {
 
 
 div.content {
-	width: calc( 100% - 380px);
+	width: calc(100% - 380px);
 	min-width: 400px;
 	float: left;
 }
@@ -194,6 +194,14 @@ table.side td.tips{
 	color: #AAA;
 }
 
+table.side td.name{
+	vertical-align: top;
+}
+
+table.side td textarea{
+	height: 6em;
+}
+
 
 
 
@@ -205,7 +213,7 @@ input#submit{
 	background-color: #05D;
 	color:#FFF; 
 	line-height: 40px;
-	width: 80%;
+	width: 100%;
 	border-radius: 10px;
 	cursor: pointer;
 }
