@@ -74,30 +74,42 @@ div.p1Content{
 	border-top: 2px solid #cc8091;
 }
 
-.p1Content h1{
-	font:24px #000 Microsoft YaHei;
+.p1Content :nth-child(1){
+	font:small-caps 24px 微软雅黑;
+	font-color:#000;
+	line-height: 40px;
 	text-decoration: underline;
+
 }
 
 .p1Content p{
-	font: 12px #676767 KaiTi;
+	font: 12px 楷体;
+	line-height: 10px;
+	font-color: #676767;
 }
 
-.p1Content h2 {
-	font: italic 116px #75b86b;
+.p1Content :nth-last-child(4) {
+	font: italic 116px 微软雅黑;
+	font-color:#75b86b;
+	text-indent: -20px;
 }
 
-.p1Content h3{
-	font: 55px #cc8091;
+.p1Content :nth-last-child(3){
+	font: 55px 微软雅黑;
+	font-color: #cc8091;
 }
 
 .p1Content:nth-last-child(2){
-	font: 21px #cc8091;
+	font: 21px 微软雅黑;
+	font-color: #cc8091;
 }
 .p1Content:nth-last-child(1){
-	font: 12px #cc8091;
+	font: 12px 微软雅黑;
+	color: #cc8091;
 }
 
+
+/*p2*/
 
 .p2 {
 	margin-top: 20px;
@@ -108,7 +120,6 @@ div.p1Content{
 	display: inline-block;
 	float: left;
 	width: 200px;
-
 	margin-right: 20px;
 }
 
