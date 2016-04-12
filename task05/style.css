@@ -1,6 +1,6 @@
 body,div,p,h1,h2,img,ul,li,figure,table,form{
 	margin: 0;
-	 padding: 0;
+	padding: 0;
 	}
 a,h1,h2,p,td,figcaption{
 	font-family:微软雅黑,sans-serif;
@@ -17,18 +17,18 @@ div.article,div#sidebar {
 
 body {
 	background: #EEE;
-	min-width: 1100px;
+	min-width: 800px;
 }
 
 div#sidebar {
-	width: 600px;
+	width: 300px;
 	float: right;
 
 }
 
 
 div.content {
-	width: calc(100% - 700px);
+	width: calc(100% - 380px);
 	min-width: 400px;
 	float: left;
 }
@@ -185,7 +185,7 @@ table.p2 th,table.p2 td {
 
 div#sidebar{
 	margin: 0 auto;
-	margin:30px; 
+	margin:20px 20px 0 20px; 
 	overflow: hidden;
 }
 
@@ -200,7 +200,6 @@ div#sidebar td,th{
 
 div#sidebar h1 {
 	font-size: 16px;
-
 	padding-left: 1em;
 	line-height:2em;
 	border-left: 5px solid #AAA;
