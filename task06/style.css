@@ -3,7 +3,7 @@
 
 *{margin: 0;padding:0;}
 
-.header,.p1,.p2,.p3,.footer{
+.wrap,.header,.p1,.p2,.p3,.p3prime,.p3sub,.footer{
 	margin: 0 auto;
 	width: 892px;
 	overflow: hidden;
@@ -15,7 +15,7 @@ body {
 	background-color: #000;
 }
 
-div.Wrap{
+div.wrap{
 	margin: 0 auto;
 	width:980px;
 	height: 1386px;
