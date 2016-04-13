@@ -1,15 +1,21 @@
+/*opacity与transprant的区别，在透明背景上如何显示内容*/
+
+
 *{margin: 0;padding:0;}
 
 .header,.p1,.p2,.p3,.footer{
 	margin: 0 auto;
 	width: 892px;
+	overflow: hidden;
 }
+
+h1,h2,p{margin: 0 ; padding: 0;}
 
 body {
 	background-color: #000;
 }
 
-div.outterWrap{
+div.Wrap{
 	margin: 0 auto;
 	width:980px;
 	height: 1386px;
@@ -21,7 +27,7 @@ div.outterWrap{
 div.header{
 	height: 61px;
 	border-bottom: 2px solid #938e8c;
-	overflow: hidden;
+	
 }
 
 div.header div.title {
@@ -49,7 +55,7 @@ div.header div.date {
 div.p1{
 	height: 301px;
 	margin-top: 30px;
-	overflow: hidden;
+	
 }
 
 div.p1 .pic{
@@ -95,12 +101,6 @@ p.p1Title{
 	text-transform: capitalize;
 }
 
-p.p1Content .p1Title:first-letter{
-
-
-	
-}
-
 p.p1Sub{
 	font: 12px 楷体;
 	line-height: 10px;
@@ -142,7 +142,7 @@ div.p1Content span:nth-last-child(1){
 
 div.p2 {
 	margin-top: 20px;
-	overflow: hidden;
+	
 }
 
 div.p2 div[class^="content"]{
@@ -164,9 +164,21 @@ div.content3{
 	width: 150px;
 }
 
-div.content1 h1{color: #418c59;}
-div.content2 h1{color: #d2994f;}
-div.content3 h1{color: #cc7680;}
+div.content1 h1{
+	color: #418c59;
+	margin-bottom: 10px;
+}
+
+div.content2 h1{
+	color: #d2994f;
+	margin-bottom: 10px;
+}
+
+div.content3 h1{
+	color: #cc7680;
+	margin-bottom: 10px;
+}
+
 
 .p2 h1{
 	font: bold 16px 微软雅黑;
@@ -202,45 +214,70 @@ div.content3 h1{color: #cc7680;}
 	opacity: 0.7;
 }
 
+/*p3*/
+
+
 .p3{
 	margin-top: 50px;
+
 }
 
 
 .p3prime {
 	float: left;
 	width: 415px;
-	overflow: hidden;
 	position: relative;
+	margin-right: 15px;
+	overflow: hidden;
 }
-.p3prime em{
-	font: italic bold 72px 黑体;
-	color:#f5e327;
+
+.p3prime div.title{
+	border-bottom: 2px solid;
+	margin-bottom: 20px;
 }
 
 .p3prime h1{
 	font: bold 42px 黑体;
 	color:#11456b;
-	line-height: 16px;
+	line-height: 42px;
+	margin-bottom: 16px;
+}
+
+.p3prime em{
+	font: italic bold 72px 黑体;
+	color:#f5e327;
+	line-height: 72px;
 }
 
 .p3prime h2{
 	font: bold 33px 黑体;
 	color:#11456b;
-	line-height: 16px;
-
+	line-height: 33px;
+	margin-bottom: 16px;
 }
 
-
-
 .p3prime .content{
+	float: left;	
+}
+
+.p3prime .content strong {
+	display: block;
 	float: left;
-	margin-right: 20px;
+	margin-right: 10px;
+	font: 70px 微软雅黑;
+	line-height: 70px;
+	color: #f6e327;
 }
 
 .p3prime p{
-	font-size: 12px;
+	font: 12px 宋体;
+	color: #767777;
 	line-height: 16px;
+	text-indent: 2em;
+}
+
+.p3prime p:nth-child(1){
+	text-indent: 0em;
 }
 
 .p3prime p em{
@@ -258,4 +295,168 @@ div.content3 h1{color: #cc7680;}
 	float: left;
 	width: 458px;
 	overflow: hidden;
+}
+
+.p3sub .pic img {
+	height: 275px;
+}
+
+.p3sub .pic {
+	position: relative;
+	height: 275px;
+}
+
+
+.p3sub .pic .bg{
+	width: 458px;
+	height: 61px;
+	background-color: #000;
+	opacity: 0.5;
+	/*background: transparent;*/
+	position: absolute;
+	bottom:0px;
+}
+.p3sub .pic .bg h1{
+	display: inline-block;
+	font: 26px 微软雅黑;
+	color: #fff; 
+	line-height: 44px;
+	height: 44px;
+	border-left: 3px solid #72b16a;
+	margin: 10px 0px 10px 40px;
+	padding: 0 10px;
+
+}
+
+.p3sub .pic .bg h2{
+	display: inline-block;
+	font: italic 12px 微软雅黑;
+	color: #72b16a;
+	letter-spacing: 1.4em;
+}
+
+.p3sub .catalog {
+	width: 459px;
+	height: 318px;
+	background-color:#eeedd6;
+	margin-top: 30px;
+}
+
+.p3sub ul {
+	float: left;
+	list-style-type: none;
+	padding: 30px 0 10px 30px; 
+}
+
+.p3sub ul li{
+	display: inline-block;
+	font:16px 宋体;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.p3sub ul span {
+	font: italic 12px 宋体;
+	text-align: right;
+	margin-bottom: 20px; 
+}
+
+.p3sub ul li:before {
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	margin-right: 5px;
+	border-left: 0.3em solid transparent;
+	border-right: 0.3em solid transparent;
+	border-bottom: 0.6em solid #000;
+}
+
+.p3sub ul span:after {
+	content: "";
+	display: block;
+	height: 0
+}
+
+.p3sub .cover {
+	float: left;
+	background-color: #d45d5c;
+	height: 160px; 
+	width: 260px;
+
+}
+
+.p3sub .cover h1 {
+	display: block;
+	float: left;
+	font: 110px 微软雅黑;
+	color: #fff;
+	margin-right: 8px;
+	border-right: 2px solid #fff;
+	height: 86px;
+	line-height: 86px;
+	margin: 37px 10px;
+}
+
+.p3sub .cover h2 {
+  	margin-top: 37px;
+  	font: oblique 21px 黑体;
+  	line-height: 24px;
+	color: #fff;
+}
+
+.p3sub .cover p {
+	margin-top: 5px;
+	line-height: 6px;
+	font: 12px 黑体;
+	color: #fff;
+}
+
+.p3sub .describe {
+	float: right;
+	width: 178px;
+	height: 160px;
+	margin: 0 10px;
+	
+}
+
+.p3sub .describe p {
+	position: relative;
+	font: oblique 14px 黑体;
+	color: #5a5b5b;
+	line-height: 16px;
+	text-indent: 3em;
+	margin-top: 15px;	
+}
+
+.p3sub .describe em{
+	font: 72px 黑体;
+	color: #d45d5c;
+	line-height: 16px;
+}
+
+.p3sub .describe em:nth-child(1){
+	position: absolute;
+	left: -80px;
+	top: 15px;
+}
+
+
+.p3sub .describe em:nth-child(2){
+	position: absolute;
+	right: -20px;
+	bottom: -30px;
+}
+
+.footer {
+	float: left;
+	margin-top: 40px;
+	height: 61px;
+	border-top: 1px solid  #938c8c;
+	clear: both;
+}
+
+.footer p{
+	text-align: right;
+	font: 12px 黑体;
 }
