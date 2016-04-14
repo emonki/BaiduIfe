@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<style type="text/css">
+
+body,div {margin:0; padding:0;}
+/**/
+
+.wrap{
+	width:400px;
+	height:200px;
+	background-color: #ccc;
+	overflow: hidden;
+	position:absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+.quarter{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #fc0;
+}
+
+.quarter:nth-child(1){
+	margin: -50px 0 0 -50px;
+}
+
+.quarter:nth-child(2){
+	margin: 100px 0 0 350px;
+}
+
+</style>
+
+
+<body>
+
+<div class="wrap">
+	<div class="quarter"></div>
+	<div class="quarter"></div>
+</div>
+
+
+</body>
+</html>

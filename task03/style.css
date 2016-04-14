@@ -1,0 +1,92 @@
+ /*tips:
+
+1.html先写float元素，因为float不影响后续元素布局，但是会被普通流影响。
+
+2.设置margin-left/right普通流实现居中，受父元素padding宽度影响。
+
+3.positong:relative,absolute定位小地方，不能用来做自适应布局。因为absolute脱离文本流，父元素无法自适应高度。absolute不受relative的父元素的padding影响，要计算psdding值。
+
+4.清除浮动方法
+	a）父元素overflow:hidden;原理是overflow时会计算浮动部分的高度，从以撑开父元素高度。
+	b) 父元素:after一个内容为""的block;clear:both;原理是在父元素结尾添加一个内容为空的块，再清除该块元素附近的浮动，让这个块元素到最下方，撑开父元素高度。
+
+问题：能不能在不改变html结构的情况下仅凭css达到3列式中间居中自适应宽度的效果？
+
+ */
+
+
+body,div,img{margin: 0; padding: 0;}
+html {
+	font-family: 微软雅黑, sans-serif;
+	font-size: 14px;
+}
+
+
+/** {
+  box-sizing: border-box;
+}*/
+body {
+	background: #FFF;
+}
+
+
+div#info,div#profile,div#album {
+	border: 1px	solid #999;
+	background: #FFF;
+}
+
+div#container{
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid;
+	background: #EEE;
+	min-width: 520px;
+}
+
+div#container:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+div#profile{
+	padding: 20px;
+	width: 160px;
+	float:left;
+	position: relative;
+}
+
+div#profile img{
+	width: 80px;
+	height: 80px;
+	border: 1px solid;
+}
+
+div#profile span{
+	position: absolute;
+	left: 120px;
+	top: 20px;
+	right: 20px;
+}
+
+div#info {
+	padding: 20px;
+	margin: 0 140px 0 220px; 
+}
+
+div#album{
+	width: 100px;
+	float: right;
+	padding: 20px 0 0 20px;
+}
+
+div#album img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+
+
+
