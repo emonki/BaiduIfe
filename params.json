@@ -1,6 +1,6 @@
 {
   "name": "Baiduife",
   "tagline": "ife.baidu.com",
-  "body": "欢迎来到我的GitHub主页\r\n\r\n[点击进入我的百度前端技术学院任务页面](emonki.github.io/BaiduIfe/home/)",
+  "body": "欢迎来到我的GitHub主页\r\n\r\n[点击进入我的百度前端技术学院任务页面](/home)",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
