@@ -1,0 +1,157 @@
+/*
+
+font color
+#81848b
+
+orange
+#e74f4d
+
+header bg
+#fff
+
+button bg
+#e74f4d
+
+question bg
+#ededec
+
+event bg
+#f8f7f7
+
+contact us bg
+#32363e
+
+footerbg
+#2f3039
+
+form bg
+#ececee
+
+min-width=1280px
+*/
+
+* {margin:0; padding:0;}
+
+div {border: 1px solid;}
+
+.wrap {
+	min-width: 1280px;
+	overflow: hidden;
+	margin-top: 0 auto;
+	background: #fff;
+}
+/*-------------------------------*/
+.header	{
+	height:60px;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	margin-left: 100px;	
+	line-height: 60px;
+	color: #000;
+}
+
+#nav ul {
+	float: right;
+}
+
+#nav ul li {
+	list-style: none;
+	float: left;
+	padding: 0 20px;
+	height: 55px;
+	text-align: center;
+}
+
+#nav ul li a{
+	text-decoration: none;
+	line-height: 60px;
+	color: #81848b;
+
+}
+
+#nav ul li:hover,
+#nav ul li:focus {
+	border-bottom: 2px solid #e74f4d;
+	color: #e74f4d;
+}
+
+/*-------------------------------*/
+.banner {
+	height: 680px;
+	background: url(img/pic-banner1.png) no-repeat;
+	background-size: 100%; 
+}
+
+
+
+/*-------------------------------*/
+.concept {
+	height: 260px; 
+}
+
+
+
+/*-------------------------------*/
+.question {
+	height: 360px;
+	background: #ededec;
+}
+
+
+
+/*-------------------------------*/
+.search {
+	height: 240px;
+	background: url(img/pic-search2.png) no-repeat;
+	background-size: 100%;
+}
+
+
+
+/*-------------------------------*/
+.event {
+	height: 400px;
+	background: #f8f7f7
+}
+
+
+
+/*-------------------------------*/
+.about-new {
+	height: 570px;
+
+}
+
+
+
+/*-------------------------------*/
+.about-us {
+	height: 520px;
+
+}
+
+
+
+/*-------------------------------*/
+.volunteer {
+	height: 640px;
+}
+
+
+
+/*-------------------------------*/
+.contact-us {
+	height: 370px;
+	background: #32363e;
+}
+
+
+
+/*-------------------------------*/
+.footer {
+	height: 50px;
+	background: #2f3039;
+}
