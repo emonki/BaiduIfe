@@ -1,0 +1,324 @@
+/*
+
+font color
+#81848b
+
+orange
+#e74f4d
+
+header bg
+#fff
+
+button bg
+#e74f4d
+
+question bg
+#ededec
+
+event bg
+#f8f7f7
+
+contact us bg
+#32363e
+
+footerbg
+#2f3039
+
+form bg
+#ececee
+
+min-width=1280px
+*/
+
+* {margin:0; padding:0;}
+
+div,figure,ul,li {border: 1px solid;}
+
+.wrap {
+	min-width: 1280px;
+	overflow: hidden;
+	margin-top: 0 auto;
+	background: #fff;
+}
+/*-------------------------------*/
+.header	{
+	height:60px;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	margin-left: 100px;	
+	line-height: 60px;
+	color: #000;
+}
+
+#nav ul {
+	float: right;
+}
+
+#nav ul li {
+	list-style: none;
+	float: left;
+	padding: 0 20px;
+	height: 55px;
+	text-align: center;
+}
+
+#nav ul li a{
+	text-decoration: none;
+	line-height: 60px;
+	color: #81848b;
+
+}
+
+#nav ul li:hover,
+#nav ul li:focus {
+	border-bottom: 2px solid #e74f4d;
+	color: #e74f4d;
+}
+
+/*-------------------------------*/
+.banner {
+	height: 680px;
+	background: url(img/pic-banner1.png) no-repeat;
+	background-size: 100%; 	
+	background-color: #e74f4d;
+}
+
+.banner .banner-content {
+	margin: 220px 0 220px 120px; 
+}
+
+.banner .banner-content h1 {
+	font-size: 64px;
+	color: #fff;
+}
+
+.banner .banner-content h2 {
+	font-size: 24px;
+	color: #fff;
+}
+
+.banner .button {
+	margin-top: 60px;
+	width: 340px;
+	height: 60px;
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	background-color: #e74f4d;
+}
+
+
+
+
+/*-------------------------------*/
+.concept {
+	height: 280px; 
+}
+
+.concept ul {
+	margin: 0 auto;
+	list-style: none;
+	height: 280px;
+	margin-top: 140px;
+}
+
+.concept ul li {
+	height: 50px;
+	display: inline-block;
+	width: 24%;
+}
+
+.concept ul li p {
+	margin: 0 auto;
+	text-align: center;
+	width: 11em;
+}
+
+#concept1,#concept2,#concept3 {
+	border-right: 2px solid #e74f4d;
+}
+
+
+/*-------------------------------*/
+.question {
+	height: 360px;
+	background: #ededec;
+	text-align: center;
+
+}
+
+.question p {
+	font-size: 48px;
+	color: #a8a8a8;
+	margin-top: 230px;
+}
+
+
+
+/*-------------------------------*/
+.search {
+	height: 240px;
+	background: url(img/pic-search2.png) no-repeat;
+	background-size: 100%;
+}
+
+.search h1 {
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	margin-top: 50px;
+}
+
+.search h2 {
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+.search form {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.search form select {
+	width: 240px;
+	height: 40px;
+}
+
+.search input {
+	width: 240px;
+	height: 40px;
+	background-color: #e74f4d;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1.5em;
+}
+
+
+/*-------------------------------*/
+.event {
+	height: 600px;
+	background: #f8f7f7;
+}
+
+.event-wrap {
+	margin: 100px 140px;
+}
+
+.event figure {
+	width: 23%;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+
+.event figure img {
+	border: 1px solid #dedede;
+	padding: 20px 10px;
+	background-color: #fff;
+}
+
+.event figure figcaption h1 {
+	font-size: 24px;	
+} 
+
+.event figure figcaption h2 {
+	font-size: 12px;	
+} 
+
+.event #figure2 img {
+	margin-top: 3em;
+}
+
+.event #figure2 figcaption {
+	position: absolute;
+	top: 0px;
+
+} 
+
+/*-------------------------------*/
+.about-new {
+	height: 570px;
+	overflow: hidden;
+}
+
+.about-new .figure {
+	float: left;
+	width: 840px;
+	height: 100%
+}
+
+.about-new .figure h1 {
+	font-size: 24px;
+	color: #fff;
+}
+
+.about-new .figure h2 {
+	font-size: 62px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.about-new .figure h3 {
+	font-size: 16px;
+	color: #fff;
+}
+
+.about-new .content {
+	margin-left: 842px;
+	text-align: center;
+	padding: 170px 70px;
+	height: 100%;
+}
+
+
+
+/*-------------------------------*/
+.about-us {
+	height: 520px;
+	overflow: hidden;
+}
+
+.about-us .content1 {
+	width: 420px;
+	float: left;
+}
+
+.about-us .content2 {
+	width: 420px;
+	float: left;
+}
+
+.about-us .inset {
+	width: 427px;
+	float: left;
+}
+
+
+
+/*-------------------------------*/
+.volunteer {
+	height: 640px;
+
+
+}
+
+
+
+/*-------------------------------*/
+.contact-us {
+	height: 370px;
+	background: #32363e;
+}
+
+
+
+/*-------------------------------*/
+.footer {
+	height: 50px;
+	background: #2f3039;
+}
