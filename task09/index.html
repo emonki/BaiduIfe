@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ducan's just-in-time donuts</title>
+	<style type="text/css">
+
+
+figure, form {
+	padding: 0px;
+	margin: 0px;
+}
+
+.wrap {
+	margin: 0 auto;
+	width: 800px;	
+	text-align: center;
+}
+
+figure {
+	float: left;
+	margin-left: 150px;
+}
+
+
+img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+
+}
+
+form {
+	margin-left: -150px;
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	text-align: right;
+	height: 2em;
+}
+input {
+	width: 100px;
+}
+
+
+	</style>
+
+<script type="text/javascript">
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="wrap">
+	<h1>Ducan's Just-In-Time Donuts</h1>
+	<h2>All donuts 50 cents each, cake or glazed!</h2>
+	<figure>
+	<img src="Aina.jpg"/>
+	</figure>
+	<form>
+	<ul>
+	<li class="field">
+		<label>Name</label>
+		<input id="" type="text" />
+	</li>
+	<li class="field">
+		<label># of cake donuts:</label>
+		<input id="cakedonuts" name=cakedonuts value=" " onchange="updateOrder();" type="text" />
+	</li>
+	<li class="field">
+		<label># of glazed donuts:</label>
+		<input id="glazeddonuts" name="glazeddonuts" type="text" onchange="updateOrder();"/>
+	</li>
+	<li class="field">
+		<label>Minutes 'til pickup:</label>
+		<input id="" type="text" />
+	</li>
+	<li class="field">
+		<label>Subtotal:</label>
+		<input id="subtotal" type="text" />
+	</li>
+	<li class="field">
+		<label>Tax:</label>
+		<input id="tax" type="text" />
+	</li>
+	<li class="field">
+		<label>Total:</label>
+		<input id="total" type="text" />
+	</li>
+	<ul>
+	<input type="button" id="submit" value="Place Order" onclick="placeOrder(this.form):">
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	function updateOrder() {
+		const taxrate = 0.1;
+		const donutprice = 10;
+		var numCakeDonuts = document.getElementById("cakedonuts").value;
+		var numGlazeDonuts = document.getElementById("glazeddonuts").value;
+		var subTotal = (numCakeDonuts + numGlazeDonuts) * donutprice;
+		var tax = subTotal * taxrate;
+		var total = subTotal + tax;
+		document.getElementById("subtotal").value = "$" + subTotal.toFixed(2);
+		document.getElementById("tax").value = "$" + tax.toFixed(2);
+		document.getElementById("total").value = "$" + toFixed(2);
+	}
+
+	function placeOrder() {
+		form.submit();
+	}
+
+</script>
+
+
+</body>
+</html>
