@@ -67,12 +67,12 @@ input {
 	<form>
 	<ul>
 	<li class="field">
-		<label>Name</label>
+		<label>Name:</label>
 		<input id="" type="text" />
 	</li>
 	<li class="field">
 		<label># of cake donuts:</label>
-		<input id="cakedonuts" name=cakedonuts value=" " onchange="updateOrder();" type="text" />
+		<input id="cakedonuts" name=cakedonuts onchange="updateOrder();" type="text" />
 	</li>
 	<li class="field">
 		<label># of glazed donuts:</label>
@@ -95,23 +95,23 @@ input {
 		<input id="total" type="text" />
 	</li>
 	<ul>
-	<input type="button" id="submit" value="Place Order" onclick="placeOrder(this.form):">
+	<input type="button" value="Place Order" onclick="placeOrder(this.form):">
 	</form>
 </div>
 
 
 <script type="text/javascript">
 	function updateOrder() {
-		const taxrate = 0.1;
-		const donutprice = 10;
-		var numCakeDonuts = document.getElementById("cakedonuts").value;
-		var numGlazeDonuts = document.getElementById("glazeddonuts").value;
-		var subTotal = (numCakeDonuts + numGlazeDonuts) * donutprice;
-		var tax = subTotal * taxrate;
+		const TAXRATE = 0.1;
+		const DONUTSPRICE = 10;
+		var numCakeDonuts = parseInt(document.getElementById("cakedonuts").value);
+		var numGlazeDonuts = parseInt(document.getElementById("glazeddonuts").value);
+		var subTotal = (numCakeDonuts + numGlazeDonuts) * DONUTSPRICE;
+		var tax = subTotal * TAXRATE;
 		var total = subTotal + tax;
 		document.getElementById("subtotal").value = "$" + subTotal.toFixed(2);
 		document.getElementById("tax").value = "$" + tax.toFixed(2);
-		document.getElementById("total").value = "$" + toFixed(2);
+		document.getElementById("total").value = "$" + total.toFixed(2);
 	}
 
 	function placeOrder() {
