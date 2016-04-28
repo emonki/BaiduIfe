@@ -14,13 +14,15 @@ figure, form {
 	margin: 0 auto;
 	width: 800px;	
 	text-align: center;
+	border: 1px solid;
+	box-shadow: 1px 1px 10px;
 }
+
 
 figure {
 	float: left;
 	margin-left: 150px;
 }
-
 
 img {
 	width: 150px;
@@ -32,28 +34,35 @@ img {
 form {
 	margin-left: -150px;
 	display: inline-block;
+	overflow: hidden;
 }
 
 ul {
 	list-style: none;
+	margin-top: 0px;
 }
 
 li {
 	text-align: right;
 	height: 2em;
 }
+
 input {
 	width: 100px;
 }
 
+[type="button"] {
+ float: right;
+}
+
+
+.p {
+	border: 1px solid;
+	background-color: #eee;
+}
+
 
 	</style>
-
-<script type="text/javascript">
-
-
-</script>
-
 
 </head>
 <body>
@@ -62,50 +71,65 @@ input {
 	<h1>Ducan's Just-In-Time Donuts</h1>
 	<h2>All donuts 50 cents each, cake or glazed!</h2>
 	<figure>
-	<img src="Aina.jpg"/>
+		<img src="Aina.jpg"/>
 	</figure>
 	<form>
-	<ul>
-	<li class="field">
-		<label>Name:</label>
-		<input id="" type="text" />
-	</li>
-	<li class="field">
-		<label># of cake donuts:</label>
-		<input id="cakedonuts" name=cakedonuts onchange="updateOrder();" type="text" />
-	</li>
-	<li class="field">
-		<label># of glazed donuts:</label>
-		<input id="glazeddonuts" name="glazeddonuts" type="text" onchange="updateOrder();"/>
-	</li>
-	<li class="field">
-		<label>Minutes 'til pickup:</label>
-		<input id="" type="text" />
-	</li>
-	<li class="field">
-		<label>Subtotal:</label>
-		<input id="subtotal" type="text" />
-	</li>
-	<li class="field">
-		<label>Tax:</label>
-		<input id="tax" type="text" />
-	</li>
-	<li class="field">
-		<label>Total:</label>
-		<input id="total" type="text" />
-	</li>
-	<ul>
-	<input type="button" value="Place Order" onclick="placeOrder(this.form):">
+		<ul>
+			<li class="field">
+				<label>Name:</label>
+				<input id="name" type="text" />
+			</li>
+			<li class="field">
+				<label># of cake donuts:</label>
+				<input id="cakedonuts" name=cakedonuts onchange="updateOrder();" type="text" />
+			</li>
+			<li class="field">
+				<label># of glazed donuts:</label>
+				<input id="glazeddonuts" name="glazeddonuts" type="text" onchange="updateOrder();"/>
+			</li>
+			<li class="field">
+				<label>Minutes 'til pickup:</label>
+				<input id="pickupminutes" type="text" />
+			</li>
+			<li class="field">
+				<label>Subtotal:</label>
+				<input id="subtotal" type="text" />
+			</li>
+			<li class="field">
+				<label>Tax:</label>
+				<input id="tax" type="text" />
+			</li>
+			<li class="field">
+				<label>Total:</label>
+				<input id="total" type="text" />
+			</li>
+		</ul>
+		<input type="button" value="Place Order" onclick="placeOrder(this.form);" />
 	</form>
+	<div class="p">over</div>
 </div>
 
 
 <script type="text/javascript">
+	function parseDonuts(donutString) {
+		numDonuts = parseInt(donutString);
+		if (donutString.indexOf("dozen") != -1)
+			numDonuts *= 12;
+		return numDonuts;
+	}
+
 	function updateOrder() {
 		const TAXRATE = 0.1;
-		const DONUTSPRICE = 10;
-		var numCakeDonuts = parseInt(document.getElementById("cakedonuts").value);
-		var numGlazeDonuts = parseInt(document.getElementById("glazeddonuts").value);
+		const DONUTSPRICE = 10;		
+		
+		var numCakeDonuts = parseDonuts(document.getElementById("cakedonuts").value);
+		var numGlazeDonuts = parseDonuts(document.getElementById("glazeddonuts").value);
+
+		if (isNaN(numCakeDonuts))
+			numCakeDonuts = 0;
+		if (isNaN(numGlazeDonuts))
+			numGlazeDonuts = 0;
+		
 		var subTotal = (numCakeDonuts + numGlazeDonuts) * DONUTSPRICE;
 		var tax = subTotal * TAXRATE;
 		var total = subTotal + tax;
@@ -113,10 +137,27 @@ input {
 		document.getElementById("tax").value = "$" + tax.toFixed(2);
 		document.getElementById("total").value = "$" + total.toFixed(2);
 	}
+		var numTotal = (numCakeDonuts + numGlazeDonuts);
 
 	function placeOrder() {
+		if (
+			document.getElementById("name").value=="")
+			alert("Please enter your name.");
+		else if (
+			document.getElementById("pickupminutes").value == "" || 
+			isNaN(document.getElementById("pickupminutes").value))
+			alert("Please enter the number");
+		else if (
+			isNaN(var numTotal) ||
+			var numTotal == 0
+			alert("Please order donuts");	
+		else
+
 		form.submit();
 	}
+
+
+
 
 </script>
 
