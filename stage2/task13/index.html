@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+
+</head>
+
+<body>
+
+
+<label>请输入今天幻想乡的妖力指数：</label>
+<input type="text" id="yaoli-input" />
+<button id="button">开始检测</button>
+
+<p>今天的妖气指数是：<span id="yaoli-display">未检测</span></p>
+
+
+<script>
+
+(function (){
+
+  var $ = function(id){
+    return document.getElementById(id);
+  }
+
+  $("button").addEventListener('click',function(){
+    if (!isNaN($("yaoli-input").value)){
+      $("yaoli-display").innerHTML = $("yaoli-input").value;
+    } else {
+      $("yaoli-display").innerHTML = "检测不到,检查输入数值是否正确";
+    }
+  })
+})();
+
+</script>
+
+</body>
+
+</html>
